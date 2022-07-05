@@ -3,5 +3,16 @@ module.exports = {
     title: `new`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+    {
+    resolve: `gatsby-plugin-google-fonts`,
+    options: {
+      fonts: [
+        `raleway`
+      ],
+      display: 'swap',
+    }
+  },
+  `gatsby-plugin-sass`,
+],
 }

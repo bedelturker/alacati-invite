@@ -1,0 +1,28 @@
+@use "design";
+
+* {
+    -webkit-appearance: none !important;
+    font-family: design.$font-family;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden !important;
+}
+
+// Images
+img {
+    image-rendering: -webkit-optimize-contrast !important;
+}
+
+// Selection
+::selection {
+    background-color: design.$primary-color;
+    color: white;
+}
+  
