@@ -8,7 +8,10 @@ module.exports = {
     resolve: `gatsby-plugin-google-fonts`,
     options: {
       fonts: [
-        `raleway`
+        `lato`,
+        `open-sans`,
+        `cookie`,
+        `vollkorn`
       ],
       display: 'swap',
     }
