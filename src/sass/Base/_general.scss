@@ -13,6 +13,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden !important;
+    background-color: design.$secondary-light-color !important;
 }
 
 // Images
@@ -24,5 +25,16 @@ img {
 ::selection {
     background-color: design.$primary-color;
     color: white;
+}
+
+// Others
+.wrapper-link {
+    color: unset;
+    text-decoration: none;
+    font-size: unset;
+
+    &:hover, &:active {
+        color: unset;
+    }
 }
   

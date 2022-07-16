@@ -1,0 +1,43 @@
+@use "../../Helpers/mixins";
+@use "../../Base/design";
+
+.invite {
+    @include mixins.Flex(column, center);
+    height: fit-content;
+    padding: 4vw;
+    position: relative;
+
+    &_card {
+        height: fit-content;
+        margin-bottom: 3rem;
+        &_hero {
+            height: 50rem;
+        }
+    }
+
+    &_date {
+        margin-bottom: 3rem;
+        & span {
+            font-family: design.$cursive-font;
+            font-size: calc(4.5rem + .2vw);
+            cursor: pointer;
+        }
+    }
+
+    &_place {
+        & span {
+            font-size: calc(3.5rem + .2vw);
+            font-weight: 500;
+            cursor: pointer;
+        }
+    }
+
+    &_date, &_place {
+        & span {
+            &:hover, &:active {
+                color: design.$primary-color;
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+@mixin Flex ($direction: row, $align: center, $justify: flex-start) {
+    // Default optionlara bak, align ekle
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: $justify;
+};

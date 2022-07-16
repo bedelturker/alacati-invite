@@ -1,0 +1,57 @@
+@use "../../Helpers/mixins";
+@use "../../Base/design";
+
+.navbar {
+    max-height: 20rem;
+    @include mixins.Flex(column);
+
+    &_logo {
+        font-family: design.$cursive-font;
+        font-size: calc(6rem + 2vw)
+    }
+
+    &_option {
+        background: none;
+        border: none;
+        font-weight: 800;
+        font-size: calc(1.5rem + .5vw);
+        color: design.$darkSand-color;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: design.$darkSand-color;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover, &:active {
+            &:before {
+                visibility: visible;
+                width: 100%
+            }
+        }
+        
+
+        &_active {
+            font-weight: bold;
+
+            &:before {
+                visibility: visible;
+                width: 100%;
+            }
+        }
+
+        &s{
+            @include mixins.Flex(row, center, flex-end);
+            width: 100%;
+            padding: 3rem 0;
+        }
+    
+    }
+}
