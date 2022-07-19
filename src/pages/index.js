@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 
 // Firebase
 import { doc, setDoc, Timestamp, getFirestore } from "firebase/firestore"
@@ -8,6 +8,8 @@ import db from "../utils/firebase"
 import Layout from '../components/Layout/Layout'
 import Section from "../components/Section/Section"
 import Invite from '../components/Invite/Invite'
+import Info from '../components/Info/Info'
+import Rsvp from '../components/Rsvp/Rsvp'
 
 export default function Home() {
 
@@ -20,10 +22,6 @@ export default function Home() {
     },
     notes: "Vejeteryanız.",
     hasPlusOne: true,
-    plusOne : {
-      firstName: "Ayşe",
-      lastName: "Obalı"
-    },
     willAttend: true,
 })
 
@@ -42,25 +40,31 @@ export default function Home() {
 
   // This is a section, bgNo pair
   const bgOptions = {
-    1 : 7,
+    1 : 4,
     2 : 1,
     3 : 1,
     4 : 1
   }
 
+
   return (
-    <Layout
-      bgOption={bgOptions[currentSection]}
-      navBar={currentSection !== 1 ? true : false}
-    >
-        <Section>
+    <Layout>
+        <Section
+          bgOption={5}
+        >
           <Invite />
         </Section>
-        <Section>
-          {/* <Info /> */}
+        <Section
+          bgOption={6}
+          bgOpacity={3}
+        >
+          <Info />
         </Section>
-        <Section>
-          {/* <RSVP /> */}
+        <Section
+          bgOption={7}
+          bgOpacity={2}
+        >
+          <Rsvp />
         </Section>
     </Layout>
   )

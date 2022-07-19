@@ -1,13 +1,23 @@
-// ST Font
-$font-family: 'Vollkorn', 'Lato', 'Open Sans', 'Mulish', 'sans-serif';
+// Font
+$main-font: 'Vollkorn', 'Lato', 'Open Sans', 'Mulish', 'sans-serif';
 $cursive-font: 'Cookie', 'sans-serif';
 
-// ST Colors
-$primary-color: #4a73b1;
-$primary-light-color: rgb(74, 115, 177, .6);
-$secondary-color: #ffe9ca;
-$secondary-light-color: rgb(255, 233, 202, .2);
+// Colors
+$primary-color: rgb(187, 219, 247);
+$primary-strong-color: rgb(0, 132, 248);
+$primary-light-color: #bbdbf766;
+$secondary-color: #fde3d4;
 $tertiary-color: #92dccd;
 $support-color: #fffefc;
 $foundation-color: #f4f4f4;
-$darkSand-color: #A7947A
+$darkSand-color: #a7947a;
+$darkSand-light-color: #a7947a33;
+
+// Shadow
+$basic-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+$basic-expanding-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.5);
+$sand-expanding-shadow: 0 3px 12px 0 rgba(167, 148, 122, .8);
+$light-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+$light-expanding-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.1);
+
+

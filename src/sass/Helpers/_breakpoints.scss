@@ -1,9 +1,9 @@
 $breakpoints: (
-  small: "576px",
-  medium: "768px",
-  large: "992px",
-  xlarge: "1200px",
-  xxlarge: "1400px",
+  sm: "576px",
+  me: "768px",
+  lg: "992px",
+  xlg: "1200px",
+  xxlg: "1400px",
 );
 
 @mixin breakpointMin($size) {

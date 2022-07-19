@@ -1,43 +1,77 @@
-@use "../../Helpers/mixins";
 @use "../../Base/design";
+@use "../../Helpers/mixins";
+@use "../../Helpers/breakpoints" as bp;
 
 .invite {
     @include mixins.Flex(column, center);
     height: fit-content;
-    padding: 4vw;
     position: relative;
 
+
+    &_actions {
+        @include mixins.Flex(row, center, space-evenly);
+        width: 100%;
+        margin-top: 4rem;
+    }
+
     &_card {
+        @include mixins.Flex(row, center, space-between);
         height: fit-content;
-        margin-bottom: 3rem;
+
         &_hero {
-            height: 50rem;
+            height: calc(23rem + 8vw);
+            margin: 2rem 5rem;
         }
     }
 
-    &_date {
-        margin-bottom: 3rem;
-        & span {
-            font-family: design.$cursive-font;
-            font-size: calc(4.5rem + .2vw);
-            cursor: pointer;
-        }
-    }
-
-    &_place {
-        & span {
-            font-size: calc(3.5rem + .2vw);
-            font-weight: 500;
-            cursor: pointer;
-        }
+    &_conjuction {
+        font-size: calc(2.5rem + .2vw);
+        font-weight: bold;
+        margin: .5rem 0;
     }
 
     &_date, &_place {
         & span {
+            @include mixins.Flex(row, center, center);
+            font-family: design.$cursive-font;
+            font-size: calc(2.6rem + .8vw);
+            text-align: center;
+            cursor: pointer;
+
             &:hover, &:active {
-                color: design.$primary-color;
+                color: blueviolet;
                 text-decoration: underline;
             }
         }
+    }
+
+    &_text {
+        @include mixins.Flex();
+        width: 60%;
+
+        @include bp.breakpointMax(xlg) {
+            width: 80%;
+        }
+        @include bp.breakpointMax(lg) {
+            width: 90%;
+        }
+
+        & span {
+            font-size: calc(1.7rem + .6vw);
+            text-align: center;
+        }
+    }
+
+
+    &_welcome {
+        @include mixins.Flex(row, center, center);
+        font-size: calc(2.5rem + .8vw);
+        
+        &_name {
+            margin-left: .75rem;
+            font-size: calc(3.5rem + .8vw);
+            font-family: design.$cursive-font;
+        }
+
     }
 }

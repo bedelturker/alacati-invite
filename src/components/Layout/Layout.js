@@ -9,18 +9,16 @@ const theme = createTheme(muiCustomTheme)
 
 const Layout = ({
   children,
-  navBar=true,
-  bgOption
+  // navBar=true,
+  bgOption,
+  bgOpacity=1
 }) => {
   return (
     <ThemeProvider theme={theme}>
-      <div className={`layout ${bgOption ? `layout_bg${bgOption}` : ''}`}>
-        <div className="layout_content container">
-          {navBar ? <NavBar /> : null}
+      <div className="layout">
           {children}
-          {/* Add Footer */}
+          {/* Footer */}
         </div>
-      </div>
     </ThemeProvider>
   )
 }

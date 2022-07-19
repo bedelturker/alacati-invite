@@ -1,17 +1,17 @@
 import React from 'react'
 
+import InviteActions from "./InviteActions/InviteActions"
 import InviteCard from "./InviteCard/InviteCard";
-import InviteDate from "./InviteDate/InviteDate";
-import InvitePlace from "./InvitePlace/InvitePlace";
-import ScrollMouse from '../Utils/ScrollMouse/ScrollMouse';
+import InviteText from "./InviteText/InviteText";
+import InviteWelcome from "./InviteWelcome/InviteWelcome"
 
 const Invite = () => {
   return (
     <div className="invite">
+        <InviteWelcome />
         <InviteCard />
-        <InviteDate />
-        <InvitePlace />
-        <ScrollMouse />
+        <InviteText />
+        <InviteActions />
     </div>
   )
 }

@@ -3,34 +3,15 @@
 .layout {
     min-height: 100vh;
     overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
     position: relative;
-    // Since we forward all to styles.scss, we need to figure out the path from there, not here.
+
+    & > div {
+        scroll-snap-align: center;
+    }
     
     &::-webkit-scrollbar {
         display: none;
-    }
-
-    @for $i from 1 through 7 {
-
-        &_bg#{$i} {
-            width:100%;
-            height:100%;
-            display: block;
-            position: relative;
-
-            &::after {
-                content: "";
-                background-image: url(string.insert("../assets/StockImages/bg.jpg", #{$i}, -5));
-                background-size: cover;
-                background-repeat: no-repeat;
-                opacity: .5;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                position: absolute;
-                z-index: -1;   
-            }
-        }
     }
 }

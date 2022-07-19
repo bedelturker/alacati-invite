@@ -6,61 +6,54 @@ const muiCustomTheme = {
     htmlFontSize: 11,
   },
   components: {
-    MuiTextField: {
+    MuiInput: {
       styleOverrides: {
-        root: sx({
-          "& label.Mui-focused": {
-            color: "black",
-          },
-
-          "& .MuiOutlinedInput-root": {
-            "& fieldset": {
-              borderColor: "#e5e5e5",
-            },
-            "&:hover fieldset": {
-              borderColor: "#e5e5e5",
-            },
-            "&.Mui-focused fieldset": {
-              borderColor: "limegreen",
-              borderWidth: "1px",
-            },
-          },
-        }),
-      },
+        root: {
+          height: "4rem",
+          fontSize: "calc(1.5rem + .3vw)",
+          fontFamily: "Vollkorn",
+          "&.Mui-focused": {
+            backgroundColor: "#bbdbf733",
+          }
+        },
+      }
     },
-    MuiList: {
+    MuiOutlinedInput: {
       styleOverrides: {
-        root: sx({
-          padding: 0,
-          "& .MuiListItem-root .Mui-selected": {
-            background: "#f4f4f4 !important",
-            color: "black !important",
-          },
-        }),
-      },
+        root: {
+          fontSize: "calc(1.5rem + .3vw)",
+          fontFamily: "Vollkorn",
+          
+          "&.Mui-focused": {
+            backgroundColor: "#bbdbf722",
+          }
+        },
+      }
     },
-    // MuiPaper: {
-    //   styleOverrides: {
-    //     root: sx({
-    //       transition: "none !important",
-    //     }),
-    //   },
-    // },
+    MuiFormControlLabel: {
+      styleOverrides: {
+        label: {
+          fontSize: "calc(1.4rem + .3vw)",
+          marginLeft: "1rem",
+          fontFamily: "Vollkorn",
+        },
+      } 
+    },
+    MuiRadio: {
+      styleOverrides: {
+        root: {
+          color: "#000",
+          "&.Mui-checked": {
+            color: "#000",
+          }
+        },
+      } 
+    },
     MuiButtonBase: {
       defaultProps: {
         disableRipple: true,
       },
     },
-    // MuiCheckbox: {
-    //   styleOverrides: {
-    //     root: sx({
-    //       color: "black",
-    //       "& .MuiSvgIcon-root": {
-    //         fill: "black",
-    //       },
-    //     }),
-    //   },
-    // },
     MuiTab: {
       styleOverrides: {
         root: sx({

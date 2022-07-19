@@ -2,6 +2,6 @@
     // Default optionlara bak, align ekle
     display: flex;
     flex-direction: $direction;
-    align-items: center;
+    align-items: $align;
     justify-content: $justify;
 };

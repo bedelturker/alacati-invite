@@ -1,0 +1,78 @@
+@use "../../Helpers/mixins";
+@use "../../Base/design";
+
+.info {
+    @include mixins.Flex(column, center, center);
+
+    &_body {
+        @include mixins.Flex(row, center, space-between);
+        padding: 3rem;
+        width: 95%;
+        height: calc(100vh - 13rem);
+        background-color: design.$foundation-color;
+        border-radius: 2rem;
+    }
+
+    &_header {
+        margin-bottom: 3rem;
+        margin-top: 0rem;
+        width: 100%;
+        @include mixins.Flex(row, center, center);
+        text-align: center;
+        font-size: calc(2.4rem + .8vw);
+        font-weight: bold;
+    }
+
+    &_card {
+        min-height: 100%;
+        flex: 0.27;
+        @include mixins.Flex(column, center, flex-start);
+        padding: 2rem;
+        background-color: white;
+        box-shadow: design.$light-expanding-shadow;
+        position: relative;
+
+        &:nth-child(2) {
+            flex: .4;
+        }
+
+        &_title, &_date, &_time, &_text1, &_text2, &_dressCode {
+            text-align: center;
+        }
+
+        &_icon {
+            height: 8rem;
+        }
+
+        &_title {
+            font-size: calc(1.7rem + .5vw);
+            font-weight: bold;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        &_date, &_time {
+            font-size: calc(1.3rem + .4vw);
+            font-style: italic;
+        }
+
+        &_time {
+            margin-top: .5rem;
+            margin-bottom: 4rem;
+        }
+
+        &_text1, &_text2 {
+            font-size: calc(1.4rem + .3vw);
+        }
+
+        &_text2 {
+            margin: 1.5rem 0;
+        }
+
+        &_dressCode {
+            position: absolute;
+            bottom: 1rem;
+            font-size: calc(1.4rem + .3vw);
+        }
+    }
+}
