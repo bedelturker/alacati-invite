@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import RsvpCard from './RsvpCard/RsvpCard'
+import RsvpCard from "./RsvpCard/RsvpCard";
 
 const Rsvp = () => {
   return (
     <div className="rsvp">
-        <RsvpCard />
+      <RsvpCard />
     </div>
-  )
-}
+  );
+};
 
-export default Rsvp
+export default Rsvp;
