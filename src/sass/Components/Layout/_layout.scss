@@ -1,11 +1,10 @@
 @use "sass:string" as string;
 
 .layout {
-  max-height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  position: relative;
 
   & > div {
     scroll-snap-align: center;

@@ -16,6 +16,7 @@ const Layout = ({
   return (
     <ThemeProvider theme={theme}>
       <div className="layout">
+        <NavBar />
         {children}
         {/* Footer */}
       </div>
