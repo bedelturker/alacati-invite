@@ -1,78 +1,115 @@
 @use "../../Helpers/mixins";
 @use "../../Base/design";
+@use "../../Helpers/breakpoints" as bp;
 
 .info {
-    @include mixins.Flex(column, center, center);
+  @include mixins.Flex(column, center, center);
 
-    &_body {
-        @include mixins.Flex(row, center, space-between);
-        padding: 3rem;
-        width: 95%;
-        height: calc(100vh - 13rem);
-        background-color: design.$foundation-color;
-        border-radius: 2rem;
+  &_body {
+    @include mixins.Flex(row, center, space-between);
+    padding: 3rem;
+    width: 95%;
+    height: calc(100vh - 13rem);
+    background-color: design.$foundation-color;
+    border-radius: 2rem;
+  }
+
+  &_header {
+    margin-bottom: 3rem;
+    margin-top: 0rem;
+    width: 100%;
+    @include mixins.Flex(row, center, center);
+    text-align: center;
+    font-size: calc(2.4rem + 0.8vw);
+    font-weight: bold;
+  }
+
+  &_card {
+    height: 100% !important;
+    flex: 0.27;
+    @include mixins.Flex(column, center, flex-start);
+    padding: 2rem;
+    background-color: white;
+    box-shadow: design.$light-expanding-shadow;
+    position: relative;
+
+    @include bp.breakpointMax("lg") {
+      height: calc(100% - 12rem) !important;
     }
 
-    &_header {
-        margin-bottom: 3rem;
-        margin-top: 0rem;
-        width: 100%;
+    &:nth-child(2) {
+      flex: 0.4;
+    }
+
+    &_title,
+    &_date,
+    &_time,
+    &_text1,
+    &_text2,
+    &_dressCode {
+      text-align: center;
+    }
+
+    &_icon {
+      height: 8rem;
+    }
+
+    &_title {
+      font-size: calc(1.7rem + 0.5vw);
+      font-weight: bold;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    &_date,
+    &_time {
+      font-size: calc(1.3rem + 0.4vw);
+      font-style: italic;
+    }
+
+    &_time {
+      margin-top: 0.5rem;
+      margin-bottom: 4rem;
+    }
+
+    &_text1,
+    &_text2 {
+      font-size: calc(1.4rem + 0.3vw);
+    }
+
+    &_text2 {
+      margin: 1.5rem 0;
+    }
+
+    &_dressCode {
+      position: absolute;
+      bottom: 1rem;
+      font-size: calc(1.4rem + 0.3vw);
+    }
+  }
+
+  //For mobile
+  &_body {
+    &_mobile_top {
+      @include mixins.Flex(row);
+      width: 100%;
+      border-bottom: 1px solid gray;
+
+      &_card {
+        height: 10rem;
+        width: 33%;
         @include mixins.Flex(row, center, center);
-        text-align: center;
-        font-size: calc(2.4rem + .8vw);
-        font-weight: bold;
+        border-right: 1px dashed gray;
+        cursor: pointer;
+
+        &:last-of-type {
+          border-right: none;
+        }
+
+        img {
+          height: 100%;
+        }
+      }
     }
-
-    &_card {
-        min-height: 100%;
-        flex: 0.27;
-        @include mixins.Flex(column, center, flex-start);
-        padding: 2rem;
-        background-color: white;
-        box-shadow: design.$light-expanding-shadow;
-        position: relative;
-
-        &:nth-child(2) {
-            flex: .4;
-        }
-
-        &_title, &_date, &_time, &_text1, &_text2, &_dressCode {
-            text-align: center;
-        }
-
-        &_icon {
-            height: 8rem;
-        }
-
-        &_title {
-            font-size: calc(1.7rem + .5vw);
-            font-weight: bold;
-            margin-top: 3rem;
-            margin-bottom: 2rem;
-        }
-
-        &_date, &_time {
-            font-size: calc(1.3rem + .4vw);
-            font-style: italic;
-        }
-
-        &_time {
-            margin-top: .5rem;
-            margin-bottom: 4rem;
-        }
-
-        &_text1, &_text2 {
-            font-size: calc(1.4rem + .3vw);
-        }
-
-        &_text2 {
-            margin: 1.5rem 0;
-        }
-
-        &_dressCode {
-            position: absolute;
-            bottom: 1rem;
-            font-size: calc(1.4rem + .3vw);
-        }
-    }
+  }
 }

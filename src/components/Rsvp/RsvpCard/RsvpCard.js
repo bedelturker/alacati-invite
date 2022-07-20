@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 import RsvpHeader from "./RsvpHeader/RsvpHeader";
 import RsvpForm from "./RsvpForm/RsvpForm";
@@ -6,10 +6,10 @@ import RsvpForm from "./RsvpForm/RsvpForm";
 const RsvpCard = () => {
   return (
     <div className="rsvp_card">
-          <RsvpHeader />
-          <RsvpForm />
+      <RsvpHeader />
+      <RsvpForm />
     </div>
-  )
-}
+  );
+};
 
-export default RsvpCard
+export default RsvpCard;

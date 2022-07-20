@@ -2,135 +2,133 @@
 @use "../../Helpers/mixins";
 
 .rsvp {
-    @include mixins.Flex(column, center, center);
+  @include mixins.Flex(column, center, center);
 
-    &_card {
-        @include mixins.Flex(column, center, flex-start);
-        width: 80%;
-        height: 90vh;
-        background-color: white;
-        box-shadow: design.$sand-expanding-shadow;
-        padding: 2rem 0;
+  &_card {
+    @include mixins.Flex(column, center, flex-start);
+    width: 80%;
+    height: 90vh;
+    background-color: white;
+    box-shadow: design.$sand-expanding-shadow;
+    padding: 2rem 0;
+  }
 
+  &_header {
+    @include mixins.Flex(row, center, center);
+    font-size: calc(1.8rem + 0.7vw);
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+  }
+
+  &_form {
+    padding: 0 20%;
+    width: 100rem;
+    @include mixins.Flex(column, center, flex-start);
+
+    & > form {
+      margin-top: 2rem !important;
     }
 
-    &_header {
-        @include mixins.Flex(row, center, center);
-        font-size: calc(1.8rem + .7vw);
+    &_label {
+      font-size: calc(1.5rem + 0.3vw);
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    &_textField {
+      @include mixins.Flex(row, flex-start, space-between);
+      margin-bottom: 3rem;
+
+      &_item {
+        @include mixins.Flex(column, flex-start, center);
+        width: fit-content;
+
+        & label {
+          font-size: calc(1.5rem + 0.3vw) !important;
+          font-family: "Vollkorn";
+        }
+      }
+    }
+
+    &_optionField {
+      @include mixins.Flex(column, flex-start, flex-start);
+      margin-bottom: 2rem;
+    }
+
+    &_paragraphField {
+      & > div {
+        margin-top: 2rem;
+
+        & > label {
+          font-size: calc(1.2rem + 0.3vw) !important;
+          font-weight: 600;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    &_sad {
+      @include mixins.Flex(column, center, flex-start);
+      margin-top: 2rem;
+
+      span {
+        font-size: calc(3rem + 1.5vw);
+      }
+    }
+  }
+
+  &_radio {
+    padding: 1rem 2rem;
+    width: 60rem;
+    border-radius: 1rem;
+
+    &:first-child {
+      margin-bottom: 1rem;
+    }
+
+    &_coming {
+      background-color: design.$primary-light-color;
+    }
+
+    &_notComing {
+      background-color: design.$darkSand-light-color;
+    }
+
+    &_coming,
+    &_notComing {
+      & > label > span {
         font-weight: bold;
-        width: 100%;
-        text-align: center;
+      }
     }
+  }
 
-    &_form {
-        padding: 0 20%;
-        width: 100rem;
-        @include mixins.Flex(column, center, flex-start);
+  &_submit {
+    @include mixins.Flex(row, center, center);
+    width: 100%;
+    margin-top: 5rem;
 
-        & > form {
-            margin-top: 2rem !important;
-        }
-        
-        &_label {
-            font-size: calc(1.5rem + .3vw);
-            font-weight: bold;
-            margin-bottom: 2rem;
-        }
-        
-        &_textField {
-            @include mixins.Flex(row, flex-start, space-between);
-            margin-bottom: 3rem;
+    &_btn {
+      background: none;
+      border: none;
+      font-size: calc(1.4rem + 0.3vw);
+      font-weight: bold;
+      color: #f4f4f4;
+      background-color: design.$primary-strong-color;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      font-family: "Lato";
+      transition: all 0.2s ease;
 
-            &_item {
-                @include mixins.Flex(column, flex-start, center);
-                width: fit-content;
+      &:hover,
+      &:focus,
+      &:active {
+        box-shadow: design.$sand-expanding-shadow;
+      }
 
-                & label {
-                    font-size: calc(1.5rem + .3vw) !important;
-                    font-family: "Vollkorn",
-                }
-            }
-        }
-
-        &_optionField {
-            @include mixins.Flex(column, flex-start, flex-start);
-            margin-bottom: 2rem;
-        }
-
-        &_paragraphField {
-            & > div {
-                margin-top: 2rem;
-
-                & > label {
-                    font-size: calc(1.2rem + .3vw) !important;
-                    font-weight: 600;
-                    margin-bottom: 2rem;
-                }
-            }
-        }
-
-        &_sad {
-            @include mixins.Flex(column, center, flex-start);
-            margin-top: 2rem;
-
-            span {
-                font-size: calc(3rem + 1.5vw);
-            }
-        }
-
-
-
+      &_disabled {
+        opacity: 0.2;
+      }
     }
-
-
-    &_radio {
-        padding: 1rem 2rem;
-        width: 60rem;
-        border-radius: 1rem;
-
-        &:first-child {
-            margin-bottom: 1rem;
-        }
-
-        &_coming {
-            background-color: design.$primary-light-color;
-        }
-
-        &_notComing {
-            background-color: design.$darkSand-light-color;
-        }
-
-        &_coming, &_notComing {
-            & > label > span {
-                font-weight: bold;
-            }
-        }
-    }
-
-    &_submit {
-        @include mixins.Flex(row, center, center);
-        width: 100%;
-        margin-top: 5rem;
-        
-        &_btn {
-            background: none;
-            border: none;
-            font-size: calc(1.4rem + .3vw);
-            font-weight: bold;
-            color: #f4f4f4;
-            background-color: design.$primary-strong-color;
-            padding: 1rem 2rem;
-            border-radius: 1rem;
-            font-family: "Lato";
-            transition: all .2s ease;
-
-            &:hover, &:focus, &:active {
-                box-shadow: design.$sand-expanding-shadow;
-            }
-
-            &_disabled {
-                opacity: .2;
-            }
-        }
-    }
+  }
 }
