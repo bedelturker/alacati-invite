@@ -1,17 +1,17 @@
 @use "sass:string" as string;
 
 .layout {
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
-    position: relative;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  position: relative;
 
-    & > div {
-        scroll-snap-align: center;
-    }
-    
-    &::-webkit-scrollbar {
-        display: none;
-    }
+  & > div {
+    scroll-snap-align: center;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }

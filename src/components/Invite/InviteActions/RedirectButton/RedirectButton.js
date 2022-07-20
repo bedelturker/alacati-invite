@@ -13,9 +13,7 @@ const RedirectButton = ({ buttonType = "rsvp" }) => {
       let integrationDiv = document.getElementById(referance);
       if (integrationDiv) {
         window.scrollTo(0, integrationDiv.offsetTop);
-        console.log(integrationDiv.offsetTop);
       }
-      console.log(integrationDiv);
     }, 500);
   };
 

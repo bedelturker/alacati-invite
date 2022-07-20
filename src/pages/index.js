@@ -49,7 +49,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <Section bgOption={5}>
+      <Section bgOption={5} sectionId="invite-section">
         <Invite />
       </Section>
       <Section

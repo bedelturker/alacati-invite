@@ -1,28 +1,26 @@
-import React from 'react'
-import NavBar from "../NavBar/NavBar"
+import React from "react";
+import NavBar from "../NavBar/NavBar";
 
 //Mui Customization
-import { createTheme, ThemeProvider } from "@mui/material"
-import muiCustomTheme from "../../utils/muiCustomTheme"
+import { createTheme, ThemeProvider } from "@mui/material";
+import muiCustomTheme from "../../utils/muiCustomTheme";
 
-const theme = createTheme(muiCustomTheme)
+const theme = createTheme(muiCustomTheme);
 
 const Layout = ({
   children,
   // navBar=true,
   bgOption,
-  bgOpacity=1
+  bgOpacity = 1,
 }) => {
   return (
     <ThemeProvider theme={theme}>
       <div className="layout">
-          {children}
-          {/* Footer */}
-        </div>
+        {children}
+        {/* Footer */}
+      </div>
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default Layout
-
-
+export default Layout;

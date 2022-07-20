@@ -1,39 +1,41 @@
 @use "sass:string" as string;
 
 .section {
-    height: fit-content;
-    min-height: 100vh;
-    padding: 4rem 0;
-    overflow-x: hidden;
-    // border-bottom: 1px solid lightgray;
+  height: fit-content;
+  min-height: 100vh;
+  padding: 4rem 0;
+  // border-bottom: 1px solid lightgray;
 
-    @for $i from 1 through 7 {
+  @for $i from 1 through 7 {
+    &_bg#{$i} {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
 
-        &_bg#{$i} {
-            width:100%;
-            height:100%;
-            display: block;
-            position: relative;
-
-            &::after {
-                content: "";
-                background-image: url(string.insert("../assets/StockImages/bg.jpg", #{$i}, -5));
-                background-size: 100% auto;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                position: absolute;
-                z-index: -1;   
-            }
-        }
+      &::after {
+        content: "";
+        background-image: url(string.insert(
+          "../assets/StockImages/bg.jpg",
+          #{$i},
+          -5
+        ));
+        background-size: 100% auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+      }
     }
+  }
 }
 
 @for $i from 1 through 10 {
-    .bg_opacity_#{$i} {
-        &::after {
-            opacity: 0.1 * $i;
-        }
+  .bg_opacity_#{$i} {
+    &::after {
+      opacity: 0.1 * $i;
     }
+  }
 }
