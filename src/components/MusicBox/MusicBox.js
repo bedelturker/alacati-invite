@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 //Icons
 import speakerIcon from "../../assets/Icons/volume-solid.svg";
@@ -7,30 +7,42 @@ import speakerSlashIcon from "../../assets/Icons/volume-slash-solid.svg";
 import music from "../../assets/Music/Lana-Del-Rey-Summertime-Sadness.mp3";
 
 const MusicBox = () => {
-  const [volumeOn, setVolumeOn] = useState(true);
+  const [muted, setMuted] = useState(true);
 
-  useEffect(() => {
-    const audio = document?.getElementById("invite-music");
-    if (audio) console.log(audio);
-  }, []);
+  const audioRef = useRef();
 
   return (
     <button className="music_box">
-      <audio id="invite-music" controls loop autoplay>
+      <audio
+        onPlay={() => console.log("hadi canim")}
+        id="invite-music"
+        loop
+        autoPlay={true}
+        muted={muted}
+        ref={audioRef}
+      >
         <source src={music} type="audio/mp3" />
       </audio>
       <img
         className="music_box_image"
-        src={volumeOn ? speakerIcon : speakerSlashIcon}
+        src={!muted ? speakerIcon : speakerSlashIcon}
         alt="volume-icon"
         onClick={() => {
-          setVolumeOn(!volumeOn);
+          setMuted(!muted);
           const audio = document.getElementById("invite-music");
-          audio.muted = volumeOn;
-          audio.pause();
+          audio.muted = !muted;
+          audio.volume = 0.5;
+          audio.play();
         }}
       />
     </button>
+    // <AudioPlayer
+    //   autoPlay={true}
+    //   src={music}
+    //   onPlay={(e) => console.log("onPlay")}
+    //   loop={true}
+    //   // other props here
+    // />
   );
 };
 

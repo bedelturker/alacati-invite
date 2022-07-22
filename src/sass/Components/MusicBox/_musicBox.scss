@@ -1,6 +1,9 @@
 .music_box {
   background: transparent;
   border: none;
+  position: fixed;
+  bottom: 1rem;
+  z-index: 9999;
 
   &_image {
     height: 3rem;
