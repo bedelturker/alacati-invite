@@ -54,14 +54,14 @@ const infoCards = [
 
 const InfoBody = () => {
   return (
-    <div>
+    <>
       <div className="info_body d-none d-lg-flex">
         {infoCards.map((info) => (
           <InfoCard data={info} key={info.title} />
         ))}
       </div>
       <InfoBodyMobile infos={infoCards} />
-    </div>
+    </>
   );
 };
 

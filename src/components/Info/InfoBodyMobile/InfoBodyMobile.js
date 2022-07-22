@@ -13,14 +13,17 @@ const InfoBodyMobile = ({ infos }) => {
     {
       src: drinkDoodle,
       alt: "drink doodle",
+      day: "Welcome Day",
     },
     {
       src: ringsDoodle,
       alt: "rings doodle",
+      day: "Big Day"
     },
     {
       src: palmDoodle,
       alt: "drink doodle",
+      day: "Chill Day"
     },
   ];
 
@@ -28,11 +31,16 @@ const InfoBodyMobile = ({ infos }) => {
     <div className="info_body d-block d-lg-none ">
       <div className="info_body_mobile_top mb-4">
         {iconCards.map((card, index) => (
-          <div className="info_body_mobile_top_card">
+          <div 
+            className={`info_body_mobile_top_card ${selectedIndex === index ? "info_body_mobile_top_card_active" :""}`}
+            onClick={() => setSelectedIndex(index)}
+          >
+            <span>
+              {card.day}
+            </span>
             <img
               src={card.src}
               alt={card.alt}
-              onClick={() => setSelectedIndex(index)}
             />
           </div>
         ))}

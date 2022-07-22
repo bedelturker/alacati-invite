@@ -9,9 +9,48 @@
     @include mixins.Flex(row, center, space-between);
     padding: 3rem;
     width: 95%;
-    height: calc(100vh - 13rem);
     background-color: design.$foundation-color;
     border-radius: 2rem;
+
+    //For mobile
+    &_mobile_top {
+      @include mixins.Flex(row, center, center);
+      width: 100%;
+      // border: 2px solid white;
+      border-radius: 2rem;
+
+      &_card {
+        width: 15rem;
+        padding: 1rem 0;
+        border-radius: 2rem;
+        @include mixins.Flex(column, center, center);
+        // border-right: 1px dashed gray;
+        cursor: pointer;
+
+        &:last-of-type {
+          border-right: none;
+        }
+
+        span {
+          font-size: calc(1.3rem + .4vw);
+          font-weight: bold;
+          text-align: center;
+        }
+
+        img {
+          height: 6rem;
+
+          @include bp.customBreakpointMax(475px) {
+            display: none;
+          }
+        }
+
+        &_active {
+          background-color: white;
+          box-shadow: design.$light-expanding-shadow;
+        }
+      }
+    }
   }
 
   &_header {
@@ -25,7 +64,8 @@
   }
 
   &_card {
-    height: 100% !important;
+    min-height: calc(100vh - 12rem) !important;
+    height: fit-content;
     flex: 0.27;
     @include mixins.Flex(column, center, flex-start);
     padding: 2rem;
@@ -33,8 +73,8 @@
     box-shadow: design.$light-expanding-shadow;
     position: relative;
 
-    @include bp.breakpointMax("lg") {
-      height: calc(100% - 12rem) !important;
+    @include bp.breakpointMax(lg) {
+      min-height: calc(100% - 14rem) !important;
     }
 
     &:nth-child(2) {
@@ -57,8 +97,11 @@
     &_title {
       font-size: calc(1.7rem + 0.5vw);
       font-weight: bold;
-      margin-top: 3rem;
       margin-bottom: 2rem;
+
+      @include bp.breakpointMin(lg) {
+        margin-top: 3rem;
+      }
     }
 
     &_date,
@@ -82,34 +125,8 @@
     }
 
     &_dressCode {
-      position: absolute;
-      bottom: 1rem;
+      margin-top: 5rem;
       font-size: calc(1.4rem + 0.3vw);
-    }
-  }
-
-  //For mobile
-  &_body {
-    &_mobile_top {
-      @include mixins.Flex(row);
-      width: 100%;
-      border-bottom: 1px solid gray;
-
-      &_card {
-        height: 10rem;
-        width: 33%;
-        @include mixins.Flex(row, center, center);
-        border-right: 1px dashed gray;
-        cursor: pointer;
-
-        &:last-of-type {
-          border-right: none;
-        }
-
-        img {
-          height: 100%;
-        }
-      }
     }
   }
 }

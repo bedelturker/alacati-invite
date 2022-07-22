@@ -7,15 +7,13 @@
 
   &_card {
     @include mixins.Flex(column, center, flex-start);
-    width: fit-content;
-    max-width: 80%;
-    height: 90vh;
+    width: 80%;
     background-color: white;
     box-shadow: design.$sand-expanding-shadow;
     padding: 2rem 0;
 
-    @include bp.breakpointMax("lg") {
-      max-width: 100%;
+    @include bp.breakpointMax(lg) {
+      width: 100%;
       height: fit-content;
     }
   }
@@ -30,7 +28,6 @@
 
   &_form {
     padding: 0 20%;
-    // width: 100rem;
     @include mixins.Flex(column, center, flex-start);
 
     @include bp.breakpointMax("lg") {
@@ -39,6 +36,14 @@
 
     & > form {
       margin-top: 0.5rem !important;
+      width: 60rem;
+      @include bp.breakpointMax(md) {
+        width: 45rem;
+      }
+      @include bp.breakpointMax(sm) {
+        width: 100%;
+      }
+
     }
 
     &_label {
@@ -50,6 +55,10 @@
     &_textField {
       @include mixins.Flex(row, flex-start, space-between);
       margin-bottom: 3rem;
+
+      @include bp.customBreakpointMax(475px) {
+        @include mixins.Flex(column, flex-start, space-between);
+      }
 
       &_item {
         @include mixins.Flex(column, flex-start, center);

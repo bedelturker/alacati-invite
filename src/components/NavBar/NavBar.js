@@ -32,6 +32,7 @@ const NavBar = () => {
 
   return (
     <div className="navbar d-block d-lg-none">
+      <span className="navbar_hero">Hazal & Gilles</span>
       <div
         id="mobile-menu-button"
         onClick={() => {
@@ -56,26 +57,6 @@ const NavBar = () => {
           </span>
         ))}
       </div>
-      {/* <div className="navbar_options">
-        <NavbarOption
-          activeOption={activeOption}
-          setActiveOption={setActiveOption}
-          optionText={"You are Invited!"}
-          optionNo={0}
-        />
-        <NavbarOption
-          activeOption={activeOption}
-          setActiveOption={setActiveOption}
-          optionText={"Things to Know"}
-          optionNo={1}
-        />
-        <NavbarOption
-          activeOption={activeOption}
-          setActiveOption={setActiveOption}
-          optionText={"RSVP"}
-          optionNo={2}
-        />
-      </div> */}
     </div>
   );
 };
