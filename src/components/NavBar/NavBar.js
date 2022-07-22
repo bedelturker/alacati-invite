@@ -4,19 +4,34 @@ import React, { useState, useEffect } from "react";
 import NavbarOption from "./NavbarOption/NavbarOption";
 
 const NavBar = () => {
-  const [activeOption, setActiveOption] = useState(0);
+  const [activeOption, setActiveOption] = useState("invite");
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = [
-    { title: "Invite", onClickEvent: () => scrollToRef("invite-section") },
+    {
+      title: "Invite",
+      key: "invite",
+      onClickEvent: () => {
+        scrollToRef("invite-section");
+        setActiveOption("invite");
+      },
+    },
     {
       title: "Info",
-      onClickEvent: () => scrollToRef("more-details-about-invitation"),
+      key: "info",
+      onClickEvent: () => {
+        scrollToRef("more-details-about-invitation");
+        setActiveOption("info");
+      },
     },
     {
       title: "RSVP",
-      onClickEvent: () => scrollToRef("invitation-form"),
+      key: "rsvp",
+      onClickEvent: () => {
+        scrollToRef("invitation-form");
+        setActiveOption("rsvp");
+      },
     },
   ];
 
@@ -47,7 +62,9 @@ const NavBar = () => {
       <div className={isMenuOpen ? "open_menu" : "hiddenMenu"}>
         {menuItems.map((item) => (
           <span
-            className="nav_item"
+            className={`nav_item ${
+              activeOption === item.key ? "nav_item_active" : ""
+            }`}
             onClick={() => {
               item.onClickEvent();
               setIsMenuOpen(false);
