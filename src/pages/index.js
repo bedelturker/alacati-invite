@@ -10,8 +10,11 @@ import Section from "../components/Section/Section";
 import Invite from "../components/Invite/Invite";
 import Info from "../components/Info/Info";
 import Rsvp from "../components/Rsvp/Rsvp";
+import MusicBox from "../components/MusicBox/MusicBox";
 
 export default function Home() {
+  const [volumeOn, setVolumeOn] = useState(true);
+
   // Defining the invite response object
   const [inviteResponse, setInviteResponse] = useState({
     dateCreated: Timestamp.fromDate(new Date()),
@@ -49,6 +52,7 @@ export default function Home() {
 
   return (
     <Layout>
+      <MusicBox />
       <Section bgOption={5} sectionId="invite-section">
         <Invite />
       </Section>

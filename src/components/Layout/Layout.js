@@ -15,11 +15,13 @@ const Layout = ({
 }) => {
   return (
     <ThemeProvider theme={theme}>
+      {/* <div className="app"> */}
+      <NavBar />
       <div className="layout">
-        <NavBar />
         {children}
         {/* Footer */}
       </div>
+      {/* </div> */}
     </ThemeProvider>
   );
 };
