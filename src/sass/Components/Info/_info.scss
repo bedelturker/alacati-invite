@@ -14,10 +14,10 @@
 
     //For mobile
     &_mobile_top {
-      @include mixins.Flex(row, center, center);
+      @include mixins.Flex(row, center, space-between);
       width: 100%;
-      // border: 2px solid white;
       border-radius: 2rem;
+
 
       &_card {
         width: 15rem;

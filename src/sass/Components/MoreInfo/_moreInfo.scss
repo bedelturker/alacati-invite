@@ -1,0 +1,113 @@
+@use "../../Base/design";
+@use "../../Helpers/breakpoints" as bp;
+@use "../../Helpers/mixins";
+
+.more_info {
+    width: 75%;
+    margin: 0 auto;
+
+    @include bp.breakpointMax(lg) {
+        width: 95%;
+    }
+    &_header {
+        font-size: calc(2.4rem + 0.8vw);
+        font-weight: bold;
+        @include mixins.Flex(row, center, center);
+    }
+    &_body {
+        @include mixins.Flex(column, center, center);
+    }
+
+    &_trip, &_gift {
+        min-width: 100%;
+        min-height: 10rem;
+        border-radius: 2rem;
+        padding: 2rem 3rem;
+        background-color: design.$foundation-color;
+
+        &_title {
+            font-size: calc(1.8rem + .6vw);
+            font-weight: bold;
+            align-self: center;
+            margin-bottom: 2rem;
+        }
+
+        &_content {
+            @include mixins.Flex(column, flex-start, flex-start);
+            padding: 0 2rem;
+            span {
+              font-size: calc(1.5rem + .3vw)  
+            }
+            
+            img {
+                height: 2rem;
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &_trip {
+        @include mixins.Flex(column, flex-start, flex-start);
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+
+        &_content {
+
+            &_practical {
+                margin-bottom: 2rem;
+                &_file {
+                    @include mixins.Flex(row, center);
+                    font-weight: bold;
+                    margin-left: calc(2.5rem + 1.5vw);
+                    margin-top: 1rem;
+                    cursor: pointer;
+
+                    &:hover, &:active, &:focus {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            &_practical, &_options {
+                @include mixins.Flex(column, flex-start, flex-start);
+            }
+
+            &_options {
+                &_container {
+                    padding-left: calc(2.5rem + 1.5vw);
+                    @include mixins.Flex(column, flex-start, flex-start);
+
+                    a {
+                        margin: 1rem 0;
+                        cursor: pointer;
+
+                        &:hover, &:active, &:focus {
+                            opacity: 1;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        
+        }
+    }
+
+    &_gift {
+        @include mixins.Flex(column, center, center);
+        &_content {
+            @include mixins.Flex(column, center, center);
+
+            span {
+                margin: .5rem 0;
+            }
+        }
+    }
+}
+
+#iban-no {
+    margin-right: 1rem;
+
+    &-copy-icon {
+        cursor: pointer;
+    }
+}

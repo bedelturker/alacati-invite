@@ -64,6 +64,10 @@
         @include mixins.Flex(column, flex-start, center);
         width: fit-content;
 
+        @include bp.customBreakpointMax(475px) {
+          width: 100%;
+        }
+
         & label {
           font-size: calc(1.5rem + 0.3vw) !important;
           font-family: "Vollkorn";
@@ -94,6 +98,28 @@
 
       span {
         font-size: calc(3rem + 1.5vw);
+      }
+    }
+  }
+
+  &_modal {
+    &_content {
+      & > img {
+        width: 100%;
+      } 
+    }
+
+    &_close {
+      width: calc(3rem + 1.4vw);
+      height: calc(3rem + 1.4vw);
+      background-color: design.$foundation-color;
+      padding: 1rem;
+      border-radius: 50%;
+      position: absolute;
+      right: calc(1rem + .3vw);
+
+      @include bp.breakpointMin(md) {
+        display: none;
       }
     }
   }
@@ -136,13 +162,21 @@
       background: none;
       border: none;
       font-size: calc(1.4rem + 0.3vw);
+      width: 10rem;
       font-weight: bold;
       color: #f4f4f4;
-      background-color: design.$primary-strong-color;
       padding: 1rem 2rem;
       border-radius: 1rem;
       font-family: "Lato";
       transition: all 0.2s ease;
+
+      &_yes {
+        background-color: design.$primary-strong-color;
+      }
+
+      &_no {
+        background-color: design.$darkSand-strong-color;
+      }
 
       &:hover,
       &:focus,
@@ -150,9 +184,23 @@
         box-shadow: design.$sand-expanding-shadow;
       }
 
-      &_disabled {
+      &:disabled {
         opacity: 0.2;
       }
     }
   }
 }
+
+.MuiAlert-message {
+  font-family: "Mulish" !important;
+}
+
+.MuiDialog-scrollPaper > .MuiPaper-root {
+  min-width: 50vw;
+
+  @include bp.breakpointMax(md) {
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+}
+

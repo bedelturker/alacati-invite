@@ -46,8 +46,8 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navbar d-block d-lg-none">
-      <span className="navbar_hero">Hazal & Gilles</span>
+    <div className="navBar d-block d-lg-none">
+      <span className="navBar_hero">Hazal & Gilles</span>
       <div
         id="mobile-menu-button"
         onClick={() => {

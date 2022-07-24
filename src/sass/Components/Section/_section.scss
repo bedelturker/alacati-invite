@@ -6,7 +6,7 @@
   padding: 4rem 0;
   // border-bottom: 1px solid lightgray;
 
-  @for $i from 1 through 7 {
+  @for $i from 1 through 3 {
     &_bg#{$i} {
       width: 100%;
       height: 100%;

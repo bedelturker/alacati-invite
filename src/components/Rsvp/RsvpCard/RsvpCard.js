@@ -3,11 +3,17 @@ import React from "react";
 import RsvpHeader from "./RsvpHeader/RsvpHeader";
 import RsvpForm from "./RsvpForm/RsvpForm";
 
-const RsvpCard = () => {
+const RsvpCard = ({
+  openRSVPModal,
+  setAttending
+}) => {
   return (
     <div className="rsvp_card">
       <RsvpHeader />
-      <RsvpForm />
+      <RsvpForm 
+        openRSVPModal={openRSVPModal}
+        setAttending={setAttending}
+      />
     </div>
   );
 };

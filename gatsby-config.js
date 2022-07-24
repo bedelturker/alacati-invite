@@ -10,6 +10,7 @@ module.exports = {
       fonts: [
         `lato`,
         `open-sans`,
+        `mulish`,
         `cookie`,
         `vollkorn`
       ],
@@ -17,5 +18,6 @@ module.exports = {
     }
   },
   `gatsby-plugin-sass`,
+  `gatsby-plugin-react-helmet`,
 ],
 }

@@ -2,20 +2,21 @@
 @use "../../Base/design";
 @use "../../Helpers/breakpoints" as bp;
 
-.navbar {
+.navBar {
   @include mixins.Flex(column);
   background: #f2f3fb;
-  height: 5rem;
+  height: 6rem;
   position: sticky;
   top: 0;
+  z-index: 100;
 
   &_hero {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: calc(2rem + 0.5vw);
-    font-weight: 800;
+    font-size: calc(2.6rem + 1vw);
+    font-family: design.$cursive-font;
   }
 }
 
@@ -26,7 +27,7 @@
   position: absolute;
   z-index: 101;
   right: 1rem;
-  top: -0.5rem;
+  top: 0rem;
   width: 5rem;
   height: 5rem;
   cursor: pointer;

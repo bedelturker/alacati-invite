@@ -1,6 +1,12 @@
+@use "../../Base/design";
+@use "../../Helpers/breakpoints" as bp;
+
 .music_box {
-  background: transparent;
+  background-color: design.$primary-color;
+  padding: 1.5rem;
   border: none;
+  border-radius: 50%;
+  margin-left: 1rem;
   position: fixed;
   bottom: 1rem;
   z-index: 9999;
@@ -8,5 +14,10 @@
   &_image {
     height: 3rem;
     width: 3rem;
+
+    @include bp.breakpointMax(md) {
+      height: 2rem;
+      width: 2rem;
+    }
   }
 }

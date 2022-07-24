@@ -1,3 +1,4 @@
+import { red } from "@mui/material/colors";
 import { experimental_sx as sx } from "@mui/material/styles";
 
 const muiCustomTheme = {
@@ -53,6 +54,17 @@ const muiCustomTheme = {
       defaultProps: {
         disableRipple: true,
       },
+    },
+    MuiDialogTitle: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative"
+        }
+      }
     },
     MuiTab: {
       styleOverrides: {
