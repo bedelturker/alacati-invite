@@ -1,0 +1,51 @@
+[debug] [2022-07-24T16:21:09.794Z] ----------------------------------------------------------------------
+[debug] [2022-07-24T16:21:09.794Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-07-24T16:21:09.795Z] CLI Version:   11.3.0
+[debug] [2022-07-24T16:21:09.795Z] Platform:      darwin
+[debug] [2022-07-24T16:21:09.795Z] Node Version:  v16.13.2
+[debug] [2022-07-24T16:21:09.795Z] Time:          Sun Jul 24 2022 19:21:09 GMT+0300 (GMT+03:00)
+[debug] [2022-07-24T16:21:09.796Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-07-24T16:21:09.833Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-07-24T16:21:09.833Z] > authorizing via signed-in user (weddingalacati@gmail.com)
+[debug] [2022-07-24T16:21:09.833Z] [iam] checking project hazal-gilles for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-07-24T16:21:09.834Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hazal-gilles:testIamPermissions [none]
+[debug] [2022-07-24T16:21:09.834Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hazal-gilles:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-24T16:21:10.739Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hazal-gilles:testIamPermissions 200
+[debug] [2022-07-24T16:21:10.739Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hazal-gilles:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-07-24T16:21:10.740Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/hazal-gilles/serviceAccounts/hazal-gilles@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-07-24T16:21:10.740Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/hazal-gilles/serviceAccounts/hazal-gilles@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-07-24T16:21:11.527Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/hazal-gilles/serviceAccounts/hazal-gilles@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-07-24T16:21:11.528Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/hazal-gilles/serviceAccounts/hazal-gilles@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-07-24T16:21:11.529Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hazal-gilles [none]
+[debug] [2022-07-24T16:21:11.882Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hazal-gilles 200
+[debug] [2022-07-24T16:21:11.882Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hazal-gilles {"projectId":"hazal-gilles","projectNumber":"940752016677","displayName":"Hazal - Gilles Wedding Invite","name":"projects/hazal-gilles","resources":{"hostingSite":"hazal-gilles","storageBucket":"hazal-gilles.appspot.com","locationId":"europe-central2"},"state":"ACTIVE","etag":"1_58ee8328-f0d3-4ba8-8166-4921336dc5f6"}
+[info] 
+[info] === Deploying to 'hazal-gilles'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2022-07-24T16:21:11.890Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hazal-gilles [none]
+[debug] [2022-07-24T16:21:12.156Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hazal-gilles 200
+[debug] [2022-07-24T16:21:12.157Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hazal-gilles {"projectId":"hazal-gilles","projectNumber":"940752016677","displayName":"Hazal - Gilles Wedding Invite","name":"projects/hazal-gilles","resources":{"hostingSite":"hazal-gilles","storageBucket":"hazal-gilles.appspot.com","locationId":"europe-central2"},"state":"ACTIVE","etag":"1_58ee8328-f0d3-4ba8-8166-4921336dc5f6"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2022-07-24T16:21:12.160Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-07-24T16:21:12.161Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-07-24T16:21:12.162Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/cloudbuild.googleapis.com [none]
+[debug] [2022-07-24T16:21:12.164Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/artifactregistry.googleapis.com [none]
+[debug] [2022-07-24T16:21:13.298Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/runtimeconfig.googleapis.com 200
+[debug] [2022-07-24T16:21:13.298Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-07-24T16:21:13.299Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/cloudfunctions.googleapis.com 200
+[debug] [2022-07-24T16:21:13.300Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-07-24T16:21:13.301Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/artifactregistry.googleapis.com 200
+[debug] [2022-07-24T16:21:13.302Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2022-07-24T16:21:13.303Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/cloudbuild.googleapis.com 200
+[debug] [2022-07-24T16:21:13.303Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/hazal-gilles/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-07-24T16:21:13.304Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hazal-gilles/adminSdkConfig [none]
+[debug] [2022-07-24T16:21:13.667Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hazal-gilles/adminSdkConfig 200
+[debug] [2022-07-24T16:21:13.667Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hazal-gilles/adminSdkConfig {"projectId":"hazal-gilles","storageBucket":"hazal-gilles.appspot.com","locationId":"europe-central2"}
+[debug] [2022-07-24T16:21:13.668Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/hazal-gilles/configs [none]
