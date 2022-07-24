@@ -7,6 +7,8 @@ const NavBar = () => {
   const [activeOption, setActiveOption] = useState("invite");
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
+  const isBrowser = typeof window !== "undefined";
 
   const menuItems = [
     {
@@ -40,7 +42,7 @@ const NavBar = () => {
     setTimeout(() => {
       let integrationDiv = document.getElementById(referance);
       if (integrationDiv) {
-        window.scrollTo(0, integrationDiv.offsetTop);
+        isBrowser && window.scrollTo(0, integrationDiv.offsetTop);
       }
     }, 500);
   };

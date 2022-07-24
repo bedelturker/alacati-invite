@@ -6,13 +6,15 @@ import React from "react";
 
 */
 
+const isBrowser = typeof window !== "undefined"
+
 const RedirectButton = ({ buttonType = "rsvp" }) => {
   //Genel scroll fonksiyonu
   const scrollToRef = (referance) => {
     setTimeout(() => {
       let integrationDiv = document.getElementById(referance);
       if (integrationDiv) {
-        window.scrollTo(0, integrationDiv.offsetTop);
+        isBrowser && window.scrollTo(0, integrationDiv.offsetTop);
       }
     }, 500);
   };

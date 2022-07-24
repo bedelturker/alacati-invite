@@ -6,7 +6,9 @@ import capitalize from '../../../utils/capitalize'
 const InviteeWelcome = () => {
     const [inviteeFullName, setInviteeFullName] = useState("");
 
-    const location = window.location;
+    const isBrowser = typeof window !== "undefined";
+
+    const location = isBrowser && window.location;
     const queryParams = new URLSearchParams(location.search);
 
     const getFullName = (firstName, lastName) => {
