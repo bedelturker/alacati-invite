@@ -8,7 +8,8 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
 // Media
-import CheersImg from "../../../assets/HGImages/attending-success.png"
+import CheersImg from "../../../assets/HGImages/yay-see-you.png"
+import SadImg from "../../../assets/HGImages/we-are-sad.png"
 import closeIcon from "../../../assets/Icons/xmark-regular.svg"
 
 /* 
@@ -38,7 +39,10 @@ const RsvpModal = ({
                     fontSize: "calc(2.2rem + .7vw)",
                 }}
             >
-                &#128526;&ensp;All Done&ensp;&#128170;
+                {attending 
+                    ? <span>&#128526;&ensp;All Done&ensp;&#128170;</span>
+                    : <span>&#128563;&ensp;Thank you&ensp;&#128148;</span>
+                }
                 <img 
                     alt="Close Icon"
                     src={closeIcon}
@@ -49,7 +53,7 @@ const RsvpModal = ({
             <div className="rsvp_modal_content">
                 <img 
                     alt={attending ? "Looking forwad to seeing you" : "We love you nonetheless"}
-                    src={CheersImg}
+                    src={attending ? CheersImg : SadImg}
                 />
             </div>
         </Dialog>
