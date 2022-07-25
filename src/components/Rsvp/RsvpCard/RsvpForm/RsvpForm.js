@@ -208,7 +208,7 @@ const RsvpForm = ({
               variant="standard"
               value={inviteResponse.guest.firstName}  
               autoFocus={inviteResponse.guest.firstName > 0 ? true : false}
-              // InputLabelProps={{ shrink: inviteResponse.guest.firstName > 0 ? true : false }}  
+              InputLabelProps={{ shrink: inviteResponse.guest.firstName > 0 ? false : true }}  
               onChange={(e) => setInviteResponse({
                 ...inviteResponse, guest: {
                   ...inviteResponse.guest, firstName: e.target.value
@@ -226,7 +226,7 @@ const RsvpForm = ({
               variant="standard"
               value={inviteResponse.guest.lastName}
               autoFocus={inviteResponse.guest.lastName > 0 ? true : false}
-              // InputLabelProps={{ shrink: inviteResponse.guest.lastName > 0 ? true : false }}  
+              InputLabelProps={{ shrink: inviteResponse.guest.lastName > 0 ? false : true }}  
               onChange={(e) => setInviteResponse({
                 ...inviteResponse, guest: {
                   ...inviteResponse.guest, lastName: e.target.value
