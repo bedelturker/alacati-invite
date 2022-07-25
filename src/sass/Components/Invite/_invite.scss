@@ -6,6 +6,7 @@
   @include mixins.Flex(column, center);
   height: fit-content;
   position: relative;
+  margin-bottom: 4rem;
 
   &_actions {
     @include mixins.Flex(row, center, space-evenly);

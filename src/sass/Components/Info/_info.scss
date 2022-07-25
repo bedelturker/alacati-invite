@@ -4,6 +4,7 @@
 
 .info {
   @include mixins.Flex(column, center, center);
+  margin-top: 4rem;
 
   &_body {
     @include mixins.Flex(row, center, space-between);

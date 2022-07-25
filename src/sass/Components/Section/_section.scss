@@ -40,8 +40,11 @@
   }
 }
 
-#more-details-about-invitation,
 #invitation-form {
   height: fit-content;
   min-height: 100vh;
+}
+
+#more-details-about-invitation {
+  min-height: fit-content;
 }

@@ -4,6 +4,7 @@
 
 .rsvp {
   @include mixins.Flex(column, center, center);
+  margin: 4rem 0;
 
   &_card {
     @include mixins.Flex(column, center, flex-start);
@@ -201,6 +202,7 @@
   @include bp.breakpointMax(md) {
     min-width: 100vw;
     min-height: 100vh;
+    border-radius: 0;
   }
 }
 

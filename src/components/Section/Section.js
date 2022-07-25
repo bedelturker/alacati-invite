@@ -1,6 +1,11 @@
 import React from "react";
 
-const Section = ({ children, bgOption, bgOpacity = 1, sectionId }) => {
+const Section = ({ 
+    children, 
+    bgOption, 
+    bgOpacity = 1, 
+    sectionId 
+}) => {
   return (
     <div
       className={`section ${

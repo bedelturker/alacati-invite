@@ -62,7 +62,8 @@ const muiCustomTheme = {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
-          position: "relative"
+          position: "relative",
+          height: "10rem"
         }
       }
     },

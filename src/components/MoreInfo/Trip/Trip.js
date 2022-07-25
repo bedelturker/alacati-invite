@@ -35,11 +35,22 @@ const Trip = () => {
             <div className="more_info_trip_content_options_container">
               <a href={Option1} target="_blank" className="wrapper_link">
                 <span>
-                  <b>Option 1:</b> Globetrotters of Turkey
+                  <img 
+                    src={DownloadIcon}
+                    alt="Download Icon"
+                  />
+                  <b>Option 1:</b>&nbsp; 
+                  Globetrotters of Turkey
                 </span>
               </a>
               <a href={Option2} target="_blank" className="wrapper_link">
-              <span><b>Option 2:</b> Chillers of Turkey</span>
+              <span>
+                  <img 
+                    src={DownloadIcon}
+                    alt="Download Icon"
+                  />
+                  <b>Option 2:</b>&nbsp; 
+                  Chillers of Turkey</span>
               </a>
             </div>
           </div>

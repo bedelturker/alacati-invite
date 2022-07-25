@@ -5,6 +5,7 @@
 .more_info {
     width: 75%;
     margin: 0 auto;
+    margin-bottom: 4rem;
 
     @include bp.breakpointMax(lg) {
         width: 95%;
@@ -24,6 +25,10 @@
         border-radius: 2rem;
         padding: 2rem 3rem;
         background-color: design.$foundation-color;
+
+        @include bp.breakpointMax(md) {
+            padding: 2rem;
+        }
 
         &_title {
             font-size: calc(1.8rem + .6vw);
@@ -61,9 +66,15 @@
                     margin-left: calc(2.5rem + 1.5vw);
                     margin-top: 1rem;
                     cursor: pointer;
+                    opacity: .6;
+
+                    @include bp.breakpointMax(md) {
+                        margin-left: 1rem;
+                    }
 
                     &:hover, &:active, &:focus {
                         text-decoration: underline;
+                        opacity: 1;
                     }
                 }
             }
@@ -77,9 +88,14 @@
                     padding-left: calc(2.5rem + 1.5vw);
                     @include mixins.Flex(column, flex-start, flex-start);
 
+                    @include bp.breakpointMax(md) {
+                        padding-left: 1rem;
+                    }
+
                     a {
                         margin: 1rem 0;
                         cursor: pointer;
+                        opacity: .6;
 
                         &:hover, &:active, &:focus {
                             opacity: 1;
@@ -99,6 +115,7 @@
 
             span {
                 margin: .5rem 0;
+                text-align: center;
             }
         }
     }

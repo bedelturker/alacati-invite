@@ -1,5 +1,6 @@
 @use '../../Base/design';
 @use "../../Helpers/mixins";
+@use "../../Helpers/breakpoints" as bp;
 
 .redirect_button {
     @include mixins.Flex(column);
@@ -11,6 +12,10 @@
     padding: .5rem 2.5rem;
     border-radius: .75rem;
     border: 2px solid transparent;
+
+    @include bp.breakpointMax(lg) {
+        min-width: 16rem;
+    }
 
     &_rsvp {
         background-color: design.$primary-color;
