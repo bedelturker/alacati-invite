@@ -65,8 +65,8 @@ const Gift = () => {
       <div className="more_info_gift_content">
         <span>&#127864;&ensp;The most beautiful gift for us is your warm attendance&ensp;&#127881;</span>
         <span>&#128155;&ensp;All we need is <u>your love</u>&ensp;&#128153;</span>
-        <span>&#128107;&ensp;If you still wish to spoil us and you wish to contribute to our future love nest&ensp;&#127919;</span>
-        <span>&#128588;&ensp;Please send us your gift through&ensp;&#128396;</span>
+        <span>&#128107;&ensp;If you still wish to spoil us and contribute to our future love nest&ensp;&#127919;</span>
+        <span>&#128588;&ensp;Please send us your gift through our IBAN&ensp;&#128396;</span>
         <span 
           style={{margin: "2rem 0"}}
           onClick={() => copyText("iban-no", setIbanCopied)}

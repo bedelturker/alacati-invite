@@ -27,7 +27,7 @@
         background-color: design.$foundation-color;
 
         @include bp.breakpointMax(md) {
-            padding: 2rem;
+            padding: 1rem;
         }
 
         &_title {
@@ -40,6 +40,11 @@
         &_content {
             @include mixins.Flex(column, flex-start, flex-start);
             padding: 0 2rem;
+
+            @include bp.breakpointMax(md) {
+                padding: 0rem;
+            }
+
             span {
               font-size: calc(1.5rem + .3vw)  
             }
