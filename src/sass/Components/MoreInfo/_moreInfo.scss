@@ -89,6 +89,9 @@
             }
 
             &_options {
+                span {
+                    margin: 1rem 0;
+                }
                 &_container {
                     padding-left: calc(2.5rem + 1.5vw);
                     @include mixins.Flex(column, flex-start, flex-start);

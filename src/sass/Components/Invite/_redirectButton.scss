@@ -14,7 +14,8 @@
     border: 2px solid transparent;
 
     @include bp.breakpointMax(lg) {
-        min-width: 16rem;
+        min-width: 18rem;
+        width: 18rem;
     }
 
     &_rsvp {

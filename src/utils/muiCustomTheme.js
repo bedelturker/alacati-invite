@@ -63,7 +63,7 @@ const muiCustomTheme = {
           justifyContent: "center",
           alignItems: "center",
           position: "relative",
-          height: "10rem"
+          paddingTop: "4rem"
         }
       }
     },

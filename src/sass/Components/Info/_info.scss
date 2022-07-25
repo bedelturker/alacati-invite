@@ -36,6 +36,10 @@
           font-size: calc(1.3rem + .4vw);
           font-weight: bold;
           text-align: center;
+
+          @include bp.breakpointMax(md) {
+            font-size: calc(1.2rem + .1vw);
+          }
         }
 
         img {
