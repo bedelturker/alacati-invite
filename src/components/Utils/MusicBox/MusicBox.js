@@ -14,7 +14,6 @@ const MusicBox = () => {
   return (
     <button className="music_box">
       <audio
-        onPlay={() => console.log("hadi canim")}
         id="invite-music"
         loop
         autoPlay={true}

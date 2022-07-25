@@ -87,7 +87,6 @@ const RsvpForm = ({
       requests: "",
       willAttend: "yes",
     }
-    console.log(emptyRSVP)
 
     // Defining the invite response object
     const [inviteResponse, setInviteResponse] = useState(emptyRSVP);
