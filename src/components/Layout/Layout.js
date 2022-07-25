@@ -41,6 +41,7 @@ const Layout = ({
         <link rel="canonical" href="https://hazalgilles.com" />
         <link rel="icon" href={favIcon} />
         <meta name="theme-color" content="#f2f3fb" />
+        <meta name="format-detection" content="telephone=no"/>
       </Helmet>
       <NavBar />
       <div className="layout">
