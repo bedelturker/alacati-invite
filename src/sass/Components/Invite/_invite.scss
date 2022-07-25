@@ -63,12 +63,14 @@
   &_text {
     @include mixins.Flex();
     width: 60%;
+    margin-top: 1rem;
 
     @include bp.breakpointMax(xlg) {
       width: 80%;
     }
     @include bp.breakpointMax(lg) {
       width: 90%;
+      margin-top: 2rem;
     }
 
     & span {
