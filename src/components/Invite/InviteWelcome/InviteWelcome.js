@@ -39,8 +39,6 @@ const InviteeWelcome = () => {
         let lastName = capitalize(queryParams.get("last") || "")
 
         getFullName(firstName, lastName);
-
-        console.log(inviteeFullName)
     }, [location])
 
 

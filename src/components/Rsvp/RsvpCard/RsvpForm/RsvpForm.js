@@ -16,6 +16,9 @@ import Alert from "../../../Utils/Alert/Alert";
 import { doc, getDoc, setDoc, Timestamp } from "firebase/firestore";
 import db from "../../../../utils/firebase";
 
+// Helpful Functions
+import capitalize from '../../../../utils/capitalize'
+
 const RsvpForm = ({
   openRSVPModal,
   setAttending
@@ -26,6 +29,15 @@ const RsvpForm = ({
   const notComingText =
     "No, it is with extreme pain in my heart but I cannot attend...";
 
+
+  // Filling the name automatically from invite
+  const isBrowser = typeof window !== "undefined";
+
+  const location = isBrowser && window.location;
+  const queryParams = new URLSearchParams(location.search);
+  
+  const paramName = capitalize(queryParams.get("first"));
+  const paramLastName =  capitalize(queryParams.get("last"));
 
   // Submit State
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -64,8 +76,8 @@ const RsvpForm = ({
     const emptyRSVP = {
       dateCreated: Timestamp.fromDate(new Date()),
       guest: {
-        firstName: "",
-        lastName: "",
+        firstName: paramName || "",
+        lastName: paramLastName || "",
       },
       plusOne: {
         firstName: "",
@@ -75,6 +87,7 @@ const RsvpForm = ({
       requests: "",
       willAttend: "yes",
     }
+    console.log(emptyRSVP)
 
     // Defining the invite response object
     const [inviteResponse, setInviteResponse] = useState(emptyRSVP);
