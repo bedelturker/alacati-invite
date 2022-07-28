@@ -3,7 +3,7 @@
 .section {
   height: fit-content;
   min-height: 100vh;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
   // border-bottom: 1px solid lightgray;
 
   @for $i from 1 through 3 {

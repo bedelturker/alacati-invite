@@ -1,0 +1,49 @@
+@use "../../Helpers/mixins";
+@use "../../Helpers/breakpoints" as bp;
+
+.scroll {
+    position: absolute;
+    bottom: -4rem;
+    left: calc(50% - 4rem);
+
+
+    &_mouse {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        width: 34px;
+        height: 55px;
+
+        &_border {
+            width: 2px;
+            padding: 10px 15px;
+            height: 30px;
+            border: 2px solid #000;
+            border-radius: 25px;
+            opacity: 0.75;
+            box-sizing: content-box;
+        }
+
+        &_wheel {
+            width: 3px;
+            height: 10px;
+            border-radius: 25%;
+            background-color: #000;
+            animation-name: scroll-down;
+            animation-duration: 2.2s;
+            animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+            animation-iteration-count: infinite;
+        }
+    }
+
+    &_text {
+        font-size: calc(1.4rem + .3vw);
+        font-weight: bold;
+        color: slategray;
+    }
+}
+
+@keyframes scroll-down {
+    0% { opacity: 0; }
+    10% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(15px); opacity: 0;}
+  }
