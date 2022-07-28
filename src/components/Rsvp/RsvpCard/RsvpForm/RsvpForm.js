@@ -274,7 +274,7 @@ const RsvpForm = ({
           <>
           <div className="rsvp_form_plusOne">
             <span className="rsvp_form_label">
-              Do you have a plus one?
+              Do you also want to register your partner?
             </span>
             <div className="rsvp_form_textField">
               <div className="rsvp_form_textField_item">
