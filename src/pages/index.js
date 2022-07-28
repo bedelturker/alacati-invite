@@ -22,20 +22,18 @@ export default function Home() {
         <Invite />
       </Section>
       <Section
-        bgOption={2}
-        bgOpacity={3}
+        bgOption={1}
         sectionId="more-details-about-invitation"
       >
         <Info />
       </Section>
       <Section
-        bgOption={2}
-        bgOpacity={3}
+        bgOption={1}
         sectionId="gift-form"
       >
         <MoreInfo />
       </Section>
-      <Section bgOption={3} bgOpacity={2} sectionId="invitation-form">
+      <Section bgOption={1} sectionId="invitation-form">
         <Rsvp />
       </Section>
     </Layout>
