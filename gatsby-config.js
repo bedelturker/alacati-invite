@@ -12,7 +12,8 @@ module.exports = {
         `open-sans`,
         `mulish`,
         `cookie`,
-        `vollkorn`
+        `vollkorn`,
+        `dancing-script`
       ],
       display: 'swap',
     }

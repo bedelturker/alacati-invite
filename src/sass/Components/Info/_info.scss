@@ -43,11 +43,8 @@
         }
 
         img {
-          height: 6rem;
-
-          @include bp.customBreakpointMax(475px) {
-            display: none;
-          }
+          height: 4rem;
+          margin-top: 1rem;
         }
 
         &_active {
