@@ -1,23 +1,38 @@
 @use "../../Base/design";
+@use "../../Helpers/mixins";
 @use "../../Helpers/breakpoints" as bp;
 
-.music_box {
-  background-color: design.$primary-color;
-  padding: 1.5rem;
-  border: none;
-  border-radius: 50%;
-  margin-left: 1rem;
+.music {
+  @include mixins.Flex(column, center, center);
+  margin-left: 2rem;
   position: fixed;
   bottom: 1rem;
   z-index: 9999;
 
-  &_image {
-    height: 3rem;
-    width: 3rem;
+  &_arrow {
+    height: 2rem;
+    margin: 1rem 0;
+  }
 
-    @include bp.breakpointMax(md) {
-      height: 2rem;
-      width: 2rem;
+  &_box {
+    background-color: design.$primary-color;
+    padding: 1.5rem;
+    border: none;
+    border-radius: 50%;
+
+    &_image {
+      height: 3rem;
+      width: 3rem;
+
+      @include bp.breakpointMax(md) {
+        height: 2rem;
+        width: 2rem;
+      }
     }
+  }
+
+  &_text {
+    font-size: calc(1.4rem + .5vw);
+    font-weight: bold;
   }
 }
