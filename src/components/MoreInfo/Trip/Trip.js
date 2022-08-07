@@ -6,7 +6,9 @@ import Option1 from "../../../assets/InfoPack/Alacati-Option1.pdf"
 import Option2 from "../../../assets/InfoPack/Alacati-Option2.pdf"
 
 // Media
-import DownloadIcon from "../../../assets/Icons/download-regular.svg"
+import DownloadIcon from "../../../assets/Icons/download-regular.svg";
+import TrottersQR from "../../../assets/QR/trotters.png";
+import ChillersQR from "../../../assets/QR/chillers.png";
 
 const Trip = () => {
 
@@ -33,25 +35,44 @@ const Trip = () => {
           <div className="more_info_trip_content_options">
             <span>We also created two options for you to plan out your trip to Alaçatı:</span>
             <div className="more_info_trip_content_options_container">
-              <a href={Option1} target="_blank" className="wrapper_link">
-                <span>
+              <div>
+                <a href={Option1} target="_blank" className="wrapper_link">
+                  <span>
+                    <img 
+                      src={DownloadIcon}
+                      alt="Download Icon"
+                    />
+                    <b>Option 1:</b>&nbsp; 
+                    Globetrotters of Turkey
+                  </span>
+                </a>
+                <div className="qr">
+                  <span>Join the Whatsapp Group!</span>
                   <img 
-                    src={DownloadIcon}
-                    alt="Download Icon"
+                    alt="trotters QR"
+                    src={TrottersQR}
                   />
-                  <b>Option 1:</b>&nbsp; 
-                  Globetrotters of Turkey
-                </span>
-              </a>
-              <a href={Option2} target="_blank" className="wrapper_link">
-              <span>
+                </div>
+              </div>
+              <div>
+                <a href={Option2} target="_blank" className="wrapper_link">
+                  <span>
+                      <img 
+                        src={DownloadIcon}
+                        alt="Download Icon"
+                      />
+                      <b>Option 2:</b>&nbsp;
+                      Chillers of Turkey
+                    </span>
+                </a>
+                <div className="qr">
+                  <span>Join the Whatsapp Group!</span>
                   <img 
-                    src={DownloadIcon}
-                    alt="Download Icon"
+                    alt="chillers QR"
+                    src={ChillersQR}
                   />
-                  <b>Option 2:</b>&nbsp; 
-                  Chillers of Turkey</span>
-              </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
