@@ -29,10 +29,11 @@
 
     @include bp.breakpointMax("lg") {
       @include mixins.Flex(column, center, space-between);
+      margin-top: 3rem;
     }
 
     &_hero {
-      height: calc(30rem + 10vw);
+      height: calc(30rem + 9vw);
       margin: 2rem 5rem;
     }
   }
@@ -45,32 +46,36 @@
 
   &_date,
   &_place {
-    & span {
+    width: 40rem;
+    @include mixins.Flex(row);
+
+    @include bp.breakpointMax("lg") {
+      justify-content: center !important;
+    }
+
+    span {
       @include mixins.Flex(row, center, center);
       font-family: design.$cursive-font;
-      font-size: calc(2.6rem + 0.8vw);
+      font-size: calc(2.4rem + 0.8vw);
       text-align: center;
-      cursor: pointer;
-
-      &:hover,
-      &:active {
-        color: blueviolet;
-        text-decoration: underline;
-      }
     }
+  }
+
+  &_date {
+    justify-content: flex-end
   }
 
   &_text {
     @include mixins.Flex();
     width: 60%;
-    margin-top: 1rem;
+    margin-top: 3rem;
 
     @include bp.breakpointMax(xlg) {
       width: 80%;
     }
     @include bp.breakpointMax(lg) {
       width: 90%;
-      margin-top: 2rem;
+      margin-top: 3rem;
     }
 
     & span {
@@ -81,11 +86,11 @@
 
   &_welcome {
     @include mixins.Flex(row, center, center);
-    font-size: calc(2.5rem + 0.8vw);
+    font-size: calc(2.3rem + 0.7vw);
 
     &_name {
       margin-left: 0.75rem;
-      font-size: calc(3.5rem + 0.8vw);
+      font-size: calc(3rem + 0.8vw);
       font-family: design.$cursive-font;
     }
   }
