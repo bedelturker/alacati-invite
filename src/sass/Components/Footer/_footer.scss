@@ -1,0 +1,13 @@
+@use "../../Helpers/mixins";
+
+.footer {
+    width: 100%;
+    @include mixins.Flex(row, center, center);
+    padding: 2rem 0;
+    border-top: 1px dashed lightgray;
+
+    span {
+        font-size: calc(1.3rem + .4vw);
+        font-weight: bold;
+    }
+}

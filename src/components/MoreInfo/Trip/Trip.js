@@ -46,7 +46,10 @@ const Trip = () => {
                     Globetrotters of Turkey
                   </span>
                 </a>
-                <div className="qr">
+                <div 
+                  className="qr"
+                  onClick={() => window.open("https://chat.whatsapp.com/FGrzwaZlejV6KQSzmJIrRh")}
+                >
                   <span>Join the Whatsapp Group!</span>
                   <img 
                     alt="trotters QR"
@@ -65,7 +68,10 @@ const Trip = () => {
                       Chillers of Turkey
                     </span>
                 </a>
-                <div className="qr">
+                <div 
+                  className="qr"
+                  onClick={() => window.open("https://chat.whatsapp.com/K55Ne41XlJC48aL2eOVLCj")}
+                >
                   <span>Join the Whatsapp Group!</span>
                   <img 
                     alt="chillers QR"

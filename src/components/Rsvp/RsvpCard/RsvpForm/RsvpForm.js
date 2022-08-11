@@ -343,7 +343,13 @@ const RsvpForm = ({
               value={inviteResponse.requests}
               onChange={(e) => setInviteResponse({
                   ...inviteResponse, requests: e.target.value
-                })}
+              })}
+              inputLabelProps={{
+                style: {
+                  fontFamily: "Vollkorn",
+                  fontSize: "10rem"
+                }
+              }}
             />
           </div>
           </>

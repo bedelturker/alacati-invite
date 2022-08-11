@@ -2,6 +2,7 @@ import React from "react";
 
 // Our own components
 import NavBar from "../NavBar/NavBar";
+import Footer from "../Footer/Footer";
 
 // Other Libraries
 import { Helmet } from "react-helmet"
@@ -46,8 +47,9 @@ const Layout = ({
       <NavBar />
       <div className="layout">
         {children}
-        {/* Footer */}
+        <Footer />
       </div>
+
     </ThemeProvider>
   );
 };

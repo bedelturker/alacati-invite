@@ -122,6 +122,16 @@
 
                         .qr {
                             @include mixins.Flex(column, center, center);
+                            background-color: white;
+                            padding: 1rem 2rem 2rem 2rem;
+                            border-radius: 2rem;
+                            margin-top: 1.5rem;
+                            cursor: pointer;
+                            box-shadow: design.$light-shadow;
+
+                            &:hover, &:active {
+                                box-shadow: design.$light-expanding-shadow;
+                            }
 
                             span {
                                 font-size: calc(1.4rem + .3vw);

@@ -85,7 +85,7 @@ const Gift = () => {
             </Tooltip>
           }
         </span>
-        <span style={{fontFamily: "Dancing Script", fontSize: "30px"}}>Hazal & Gilles</span>
+        <span style={{fontFamily: "Cookie", fontSize: "30px"}}>Hazal & Gilles</span>
       </div>
     </div>
   )

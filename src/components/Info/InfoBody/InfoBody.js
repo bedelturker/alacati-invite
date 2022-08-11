@@ -21,6 +21,10 @@ const infoCards = [
     text1:
       "We are super excited to welcome you and get a first drink and bite together!",
     text2: null,
+    location: {
+      name: "Isla Alaçatı",
+      mapLink: "https://goo.gl/maps/auCReppsDkhGrSKh9"
+    },
     dressCode: "Casual",
   },
   {
@@ -32,9 +36,13 @@ const infoCards = [
     date: "Friday, September 16",
     time: "3:30pm (sharp)",
     text1:
-      "Meeting at the bus (XXX), which will take you to the secret wedding location!",
+      "Meeting at Alaçatı Dolmuş Durağı, which will take you to the secret wedding location!",
     text2:
       "Return busses will be arranged on diffferent moments (you don’t have to arrange anything).",
+    location: {
+      name: "Top Secret",
+      mapLink: null
+    },
     dressCode: "Beach Chic",
   },
   {
@@ -47,7 +55,11 @@ const infoCards = [
     time: "2pm (not sharp)",
     text1: "You are as free as a bird to process your hangover.",
     text2:
-      "But if you want, we arranged your enterance at 'Before Sunset' beach club!",
+      "But if you want, we arranged your enterance at 'Yuzu' beach club!",
+    location: {
+      name: "Yuzu Beach",
+      mapLink: "https://goo.gl/maps/5xYqunX2Z9JeQAoN7"
+    },
     dressCode: "N/A",
   },
 ];

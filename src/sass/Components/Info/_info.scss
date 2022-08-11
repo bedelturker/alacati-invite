@@ -118,7 +118,9 @@
     }
 
     &_text1,
-    &_text2 {
+    &_text2,
+    &_location,
+    &_dressCode {
       font-size: calc(1.4rem + 0.3vw);
     }
 
@@ -126,9 +128,22 @@
       margin: 1.5rem 0;
     }
 
+
+    &_location {
+      margin-top: 4rem;
+
+      &_hasLink {
+        cursor: pointer;
+
+        &:hover, &:active {
+          text-decoration:underline;
+        }
+      }
+    }
+
     &_dressCode {
       margin-top: 5rem;
-      font-size: calc(1.4rem + 0.3vw);
+      justify-self: flex-end;
     }
   }
 }

@@ -19,6 +19,18 @@ const InfoCard = ({ data }) => {
               </span>
             );
           }
+          if (key === JSON.parse('"location"')) {
+            return (
+                <span className={`info_card_${key}`}>
+                  <b>Location:&nbsp;</b> 
+                  <span
+                    className={`${data[key].mapLink ? "info_card_location_hasLink" : ""}`}
+                    onClick={() => data[key].mapLink && window.open(data[key].mapLink)}>{data[key].name
+                    }
+                  </span>
+                </span>
+            )
+          }
           if (key !== JSON.parse('"icon"')) {
             return <span className={`info_card_${key}`}>{data[key]}</span>;
           }
