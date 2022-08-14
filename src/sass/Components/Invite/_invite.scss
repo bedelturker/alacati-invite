@@ -27,14 +27,15 @@
     @include mixins.Flex(row, center, space-between);
     height: fit-content;
 
-    @include bp.breakpointMax("lg") {
+    @include bp.breakpointMax(lg) {
       @include mixins.Flex(column, center, space-between);
       margin-top: 3rem;
     }
 
     &_hero {
-      height: calc(32rem + 11vw);
+      height: calc(25rem + 15vw);
       margin: 2rem 5rem;
+
     }
   }
 
@@ -86,11 +87,11 @@
 
   &_welcome {
     @include mixins.Flex(row, center, center);
-    font-size: calc(2.3rem + 0.7vw);
+    font-size: calc(2.2rem + 0.6vw);
 
     &_name {
       margin-left: 0.75rem;
-      font-size: calc(3rem + 0.8vw);
+      font-size: calc(3.2rem + .9vw);
       font-family: design.$cursive-font;
     }
   }

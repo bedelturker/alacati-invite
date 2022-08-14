@@ -17,7 +17,7 @@ const infoCards = [
     },
     title: "Welcome Drinks & Bites",
     date: "Thursday, September 15",
-    time: "8pm",
+    time: "8 PM",
     text1:
       "We are super excited to welcome you and get a first drink and bite together!",
     text2: null,
@@ -34,7 +34,7 @@ const infoCards = [
     },
     title: "The BIG DAY",
     date: "Friday, September 16",
-    time: "3:30pm (sharp)",
+    time: "3 PM (sharp)",
     text1:
       "Meeting at Alaçatı Dolmuş Durağı, which will take you to the secret wedding location!",
     text2:
@@ -52,7 +52,7 @@ const infoCards = [
     },
     title: "Hangover Day",
     date: "Saturday, September 17",
-    time: "2pm (not sharp)",
+    time: "2 PM (not sharp)",
     text1: "You are as free as a bird to process your hangover.",
     text2:
       "But if you want, we arranged your enterance at 'Yuzu' beach club!",
